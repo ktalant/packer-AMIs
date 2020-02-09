@@ -8,11 +8,11 @@
             "type": "amazon-ebs",
             // "access_key": "{{user `aws_access_key`}}",
             // "secret_key": "{{user `aws_secret_key`}}",
-            "region": "us-west-1",
+            "region": "{{user `aws_region`}}",
             "source_ami_filter": {
                 "filters": {
                     "virtualization-type": "hvm",
-                    "name": "amzn2-ami-hvm-2.0.*.1-x86_64-ebs",
+                    "name": "{{user `os_name`}}",
                     "root-device-type": "ebs"
                 },
                 "owners": [
@@ -20,7 +20,7 @@
                 ],
                 "most_recent": true
             },
-            "instance_type": "t2.micro",
+            "instance_type": "{{user `instance_type`}}",
             "ssh_username": "{{user `ssh_username`}}",
             "ami_name": "talant-ami-{{timestamp}}",
             "tags": {

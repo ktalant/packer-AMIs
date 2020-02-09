@@ -1,0 +1,6 @@
+{
+    "ssh_username": "ec2-user",
+    "aws_region": "us-west-2",
+    "os_name": "amzn2-ami-hvm-2.0.*.1-x86_64-ebs",
+    "instance_type": "t2.micro"
+}
