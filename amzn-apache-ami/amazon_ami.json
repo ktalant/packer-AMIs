@@ -6,7 +6,7 @@
             "source_ami_filter": {
                 "filters": {
                     "virtualization-type": "hvm",
-                    "name": "{{user `os_name`}}",
+                    "name": "amzn2-ami-hvm-2.0.*.1-x86_64-ebs",
                     "root-device-type": "ebs"
                 },
                 "owners": [
@@ -15,7 +15,7 @@
                 "most_recent": true
             },
             "instance_type": "{{user `instance_type`}}",
-            "ssh_username": "{{user `ssh_username`}}",
+            "ssh_username": "ec2-user",
             "ami_name": "talant-ami-{{timestamp}}",
             "tags": {
                 "Name": "talant-AMI-{{timestamp}}"
